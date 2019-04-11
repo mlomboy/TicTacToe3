@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tictactoe';
-}
+  hidden:boolean = false;
+   toggle() {
+      this.hidden = !this.hidden;
+      if(this.hidden) {
+          document.getElementById('newGame').style.visibility = 'hidden';
+          document.getElementById('board').style.visibility = 'visible';
+      } else {
+          document.getElementById('board').style.visibility = 'visible';
+      }
+    }
+  }
+
